@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="pt">
       <body className={comfortaa.className}>
         <Menu />
-        <main>{children}</main>
+        <main className='mt-5'>{children}</main>
         <Footer />
       </body>
     </html>
