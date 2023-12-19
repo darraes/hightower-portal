@@ -3,4 +3,3 @@ export default function Meta({title}: {title: string}) {
       <title>{title}</title>
   )
 }
-

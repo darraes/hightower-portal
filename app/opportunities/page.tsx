@@ -7,6 +7,8 @@ import Meta from '../components/Meta'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
+import './page.css'
+
 
 export default function Page() {
     return <>
@@ -14,7 +16,7 @@ export default function Page() {
         <Container>
             <Row>
                 <Col>
-                    <Card style={{ width: '22rem' }}>
+                    <Card className='opportunityCard'>
                         <Card.Img variant="top" src="1-0.webp" className='opp-card-img' />
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
@@ -35,7 +37,7 @@ export default function Page() {
                     </Card>
                 </Col>
                 <Col>
-                    <Card style={{ width: '22rem' }}>
+                    <Card className='opportunityCard'>
                         <Card.Img variant="top" src="2-0.webp" className='opp-card-img' />
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
@@ -56,7 +58,7 @@ export default function Page() {
                     </Card>
                 </Col>
                 <Col>
-                    <Card style={{ width: '22rem' }}>
+                    <Card className='opportunityCard'>
                         <Card.Img variant="top" src="3-0.webp" className='opp-card-img' />
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
@@ -80,7 +82,7 @@ export default function Page() {
 
             <Row className='mt-5'>
                 <Col>
-                    <Card style={{ width: '22rem' }}>
+                    <Card className='opportunityCard'>
                         <Card.Img variant="top" src="4-0.webp" className='opp-card-img' />
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
@@ -100,6 +102,8 @@ export default function Page() {
                         </Card.Body>
                     </Card>
                 </Col>
+                <Col></Col>
+                <Col></Col>
             </Row>
         </Container >
     </>;

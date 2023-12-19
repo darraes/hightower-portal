@@ -22,6 +22,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
+      <meta charSet="utf-8" />
+      <link rel="icon" href="/favicon.png" />
       <body className={comfortaa.className}>
         <Menu />
         <main className='mt-5'>{children}</main>
