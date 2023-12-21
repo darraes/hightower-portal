@@ -3,3 +3,8 @@
     text-decoration: none;
     box-shadow: 40px 0 0 -39px #adb5bd;
   }
+
+
+.progressChart {
+    height: 18em;
+}

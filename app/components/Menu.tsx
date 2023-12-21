@@ -30,7 +30,8 @@ export default function Menu() {
                     <Nav className="me-auto">
                         <NavItem text='Dashboard' path="/"/>
                         <NavItem text='Oportunidades' path="/opportunities"/>
-                        <NavItem text='Sobre' path="/about"/>
+                        <NavItem text='Movimentações' path="/money_movement"/>
+                        <NavItem text='Ajuda' path="/help"/>
                     </Nav>
                 </Navbar.Collapse>
                 <Navbar.Collapse className="justify-content-end">

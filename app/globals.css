@@ -7,3 +7,11 @@ main {
 .floatRight {
   float: right;
 }
+
+.floatLeft {
+  float: right;
+}
+
+.center {
+  margin: auto;
+}
