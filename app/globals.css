@@ -3,3 +3,7 @@
 main {
   min-height: 80vh;
 }
+
+.floatRight {
+  float: right;
+}
