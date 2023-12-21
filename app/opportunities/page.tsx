@@ -13,7 +13,7 @@ import './page.css'
 export default function Page() {
     return <>
         <Meta title="Oportunidades" />
-        <Container>
+        <Container className='mt-5'>
             <Row>
                 <Col>
                     <Card className='opportunityCard'>
