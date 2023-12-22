@@ -8,7 +8,7 @@ export default function Page() {
   return <>
     <Container>
       <Row>
-        <Col>Help</Col>
+        <Col>Movimentacoes</Col>
       </Row>
     </Container>
   </>;

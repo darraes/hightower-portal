@@ -3,6 +3,7 @@ import { Comfortaa } from 'next/font/google'
 import { Inter } from 'next/font/google'
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
+import Meta from './components/Meta'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './globals.css'
@@ -26,6 +27,7 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.png" />
       <body className={comfortaa.className}>
         <Menu />
+        <Meta title="AirShare" />
         <main>{children}</main>
         <Footer />
       </body>

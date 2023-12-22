@@ -12,7 +12,6 @@ import './page.css'
 
 export default function Page() {
     return <>
-        <Meta title="Oportunidades" />
         <Container className='mt-5'>
             <Row>
                 <Col>
