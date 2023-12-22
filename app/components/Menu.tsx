@@ -4,7 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'next/image'
-import NavItem from './NavItem'
+import { NavItem, NavDropdownItem } from './NavItems'
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const logoStyle = {
     marginRight: '10px',
@@ -28,18 +29,25 @@ export default function Menu() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <NavItem text='Dashboard' path="/"/>
-                        <NavItem text='Oportunidades' path="/opportunities"/>
-                        <NavItem text='Movimentações' path="/money_movement"/>
-                        <NavItem text='Ajuda' path="/help"/>
+                        <NavItem text='Dashboard' path="/dashboard" />
+                        <NavItem text='Oportunidades' path="/opportunities" />
+                        <NavDropdown title="Detalhes" id="basic-nav-dropdown">
+                            <NavDropdownItem path="/property_account" text="Movimetações" />
+                            <NavDropdownItem path="/reservations" text="Reservas" />
+                            <NavDropdown.Divider />
+                            <NavDropdownItem path="/reports" text="Relatórios" />
+                        </NavDropdown>
+                        <NavItem text='Conta' path="/digital_account" />
                     </Nav>
                 </Navbar.Collapse>
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
-                        <Navbar.Text>
-                            Cliente:
-                        </Navbar.Text>
-                        <Nav.Link href="/profile">Daniel Arraes</Nav.Link>
+                        <Nav.Link href="/profile"></Nav.Link>
+                        <NavDropdown title="Daniel Arraes" id="basic-nav-dropdown">
+                            <NavDropdownItem path="/profile" text="Perfil" />
+                            <NavDropdown.Divider />
+                            <NavDropdownItem path="/help" text="Ajuda" />
+                        </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
