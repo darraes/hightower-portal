@@ -3,7 +3,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Meta from '../components/Meta'
+import Meta from '../../components/Meta'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
@@ -16,7 +16,7 @@ export default function Page() {
             <Row>
                 <Col>
                     <Card className='opportunityCard'>
-                        <Card.Img variant="top" src="1-0.webp" className='opp-card-img' />
+                        <Card.Img variant="top" src="../1-0.webp" className='opp-card-img' />
                         <Card.Body>
                             <Card.Title>Casa 4 Quartos - Disney Springs</Card.Title>
                             <Card.Text>
@@ -43,7 +43,7 @@ export default function Page() {
                 </Col>
                 <Col>
                     <Card className='opportunityCard'>
-                        <Card.Img variant="top" src="2-0.webp" className='opp-card-img' />
+                        <Card.Img variant="top" src="../2-0.webp" className='opp-card-img' />
                         <Card.Body>
                             <Card.Title>Casa 5 Quartos - Super Piscina</Card.Title>
                             <Card.Text>
@@ -70,7 +70,7 @@ export default function Page() {
                 </Col>
                 <Col>
                     <Card className='opportunityCard'>
-                        <Card.Img variant="top" src="3-0.webp" className='opp-card-img' />
+                        <Card.Img variant="top" src="../3-0.webp" className='opp-card-img' />
                         <Card.Body>
                             <Card.Title>Casa 3 Quartos - 5min do MK</Card.Title>
                             <Card.Text>
@@ -100,7 +100,7 @@ export default function Page() {
             <Row className='mt-5'>
                 <Col>
                     <Card className='opportunityCard'>
-                        <Card.Img variant="top" src="4-0.webp" className='opp-card-img' />
+                        <Card.Img variant="top" src="../4-0.webp" className='opp-card-img' />
                         <Card.Body>
                             <Card.Title>Casa 3 Quartos - Rancho Blue</Card.Title>
                             <Card.Text>

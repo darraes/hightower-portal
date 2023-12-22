@@ -30,11 +30,11 @@ export default function Menu() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <NavItem text='Dashboard' path="/dashboard" />
-                        <NavItem text='Oportunidades' path="/opportunities" />
-                        <NavItem text='Conta' path="/digital_account" />
-                        <NavDropdown title="Detalhes" id="basic-nav-dropdown">
-                            <NavDropdownItem path="/property_account" text="Movimetações" />
-                            <NavDropdownItem path="/reservations" text="Reservas" />
+                        <NavItem text='Oportunidades' path="/opportunities/list" />
+                        <NavDropdown title="Financeiro" id="basic-nav-dropdown">
+                            <NavDropdownItem path="/digital_account/property" text="Movimetações" />
+                            <NavDropdownItem text='Conta' path="/digital_account/user" />
+                            <NavDropdownItem path="/reservations/list" text="Reservas" />
                             <NavDropdown.Divider />
                             <NavDropdownItem path="/reports" text="Relatórios" />
                         </NavDropdown>
@@ -44,7 +44,7 @@ export default function Menu() {
                     <Nav>
                         <Nav.Link href="/profile"></Nav.Link>
                         <NavDropdown title="Daniel Arraes" id="basic-nav-dropdown">
-                            <NavDropdownItem path="/profile" text="Perfil" />
+                            <NavDropdownItem path="/settings" text="Perfil" />
                             <NavDropdown.Divider />
                             <NavDropdownItem path="/help" text="Ajuda" />
                         </NavDropdown>

@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
     async redirects() {
-      return [
-        {
-          source: '/',
-          destination: '/dashboard',
-          permanent: true,
-        },
-      ]
+        return [
+            {
+                source: '/',
+                destination: '/dashboard',
+                permanent: true,
+            },
+        ]
     },
-  }
+}

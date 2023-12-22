@@ -7,7 +7,7 @@ export default function Page() {
   return <>
     <Container>
       <Row>
-        <Col>Digital Account</Col>
+        <Col>Movimentacoes das Propriedades</Col>
       </Row>
     </Container>
   </>;

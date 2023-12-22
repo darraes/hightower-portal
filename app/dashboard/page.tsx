@@ -14,7 +14,7 @@ import { monthText } from '../utils/DateTimeUtils';
 import { AttributeContainer } from '../components/Attribute';
 import Image from 'next/image';
 import ReservationsTable from '../reservations/ReservationsTable'
-import PropertyDigitalAccountTable from '../property_account/PropertyDigitalAccountTable'
+import PropertyDigitalAccountTable from '../digital_account/property/PropertyDigitalAccountTable'
 
 import {
     Chart as ChartJS,

@@ -7,7 +7,7 @@ export default function Page() {
   return <>
     <Container>
       <Row>
-        <Col>Property Detail</Col>
+        <Col>Opportunity View</Col>
       </Row>
     </Container>
   </>;
