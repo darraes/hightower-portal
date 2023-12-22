@@ -7,7 +7,7 @@ export default function Page() {
   return <>
     <Container>
       <Row>
-        <Col>Help</Col>
+        <Col>Settings</Col>
       </Row>
     </Container>
   </>;

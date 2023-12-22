@@ -31,13 +31,13 @@ export default function Menu() {
                     <Nav className="me-auto">
                         <NavItem text='Dashboard' path="/dashboard" />
                         <NavItem text='Oportunidades' path="/opportunities" />
+                        <NavItem text='Conta' path="/digital_account" />
                         <NavDropdown title="Detalhes" id="basic-nav-dropdown">
                             <NavDropdownItem path="/property_account" text="Movimetações" />
                             <NavDropdownItem path="/reservations" text="Reservas" />
                             <NavDropdown.Divider />
                             <NavDropdownItem path="/reports" text="Relatórios" />
                         </NavDropdown>
-                        <NavItem text='Conta' path="/digital_account" />
                     </Nav>
                 </Navbar.Collapse>
                 <Navbar.Collapse className="justify-content-end">
