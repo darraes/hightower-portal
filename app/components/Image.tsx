@@ -2,7 +2,7 @@
 
 import { useImage } from 'react-image'
 
-export default function MyImage({ src, alt }: { src: string, alt: string }) {
+export default function Image({ src, alt }: { src: string, alt: string }) {
     const image = useImage({
         srcList: src,
     })

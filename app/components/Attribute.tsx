@@ -68,7 +68,7 @@ export function Attribute({ name, value, type }: { name: string, value: string, 
     }
 };
 
-export function AttributeHList({ attributes, type }: { attributes: Attrib[], type?: AttribType }) {
+export function AttributeList({ attributes, type }: { attributes: Attrib[], type?: AttribType }) {
     return (
         <>
             {attributes.map(function (attrib, i) {

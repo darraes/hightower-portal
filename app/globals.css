@@ -17,6 +17,13 @@ main {
   max-width: 24rem;
 }
 
+.centeredText {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  margin: auto;
+}
+
 .removeUnderline {
   text-decoration: none !important;
   display: inline-block;
