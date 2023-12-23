@@ -9,6 +9,8 @@ import { AttributeList, AttribType } from '@/app/components/Attribute';
 import Image from 'next/image'
 import Label from '../../components/Label'
 import Link from 'next/link'
+import { FinancialsCard, FinancialsType } from '../../components/FinancialsCard'
+import Button from 'react-bootstrap/Button';
 
 
 
@@ -22,7 +24,6 @@ export default function Page() {
       { name: "Quartos", value: "4" },
       { name: "Banheiros", value: "3" },
       { name: "Metros Quadrados", value: "142" },
-      { name: "Ocupação (12M)", value: "81%" },
       { name: "Cotas", value: "0/1000" },
     ];
 
@@ -55,6 +56,9 @@ export default function Page() {
                 <div>
                   <AttributeList attributes={priorityAttribs} type={AttribType.Inverted} />
                 </div>
+                <div className="" style={{ clear: 'left', paddingTop: '10px' }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu urna in ipsum ullamcorper bibendum eu nec neque. Nam non tincidunt eros. Nam eu ipsum id massa cursus pulvinar. Sed placerat, mauris sit amet laoreet egestas, est massa pretium libero, eu mollis velit odio eget sapien. Nulla vestibulum magna urna, vitae condimentum odio mattis ut.
+                </div>
               </Col>
               <Col xs={6} md={4}>
                 <Row>
@@ -63,14 +67,27 @@ export default function Page() {
                     <Label img='/car-ico.png' text="3 Garagens" />
                     <Label img='/tool-ico.png' text="2001 / 2023" />
                     <Label img='/houses-ico.png' text="Condomínio" />
+                    <Label img='/dollar-ico.png' text="Tax U$8,929" />
                   </Col>
                   <Col className='floatLeft'>
                     <Label img='/thermo-ico.png' text="Possui AC" />
                     <Label img='/dollar-ico.png' text="HOA U$129" />
                     <Label img='/fence-ico.png' text="Lote de 400m2" />
                     <Label img='/ruler-ico.png' text="Parques a 1KM" />
+                    <Button className='label img-overlay-button' variant="outline-dark" size="sm">Detalhes</Button>
                   </Col>
                 </Row>
+              </Col>
+            </Row>
+            <Row className='mt-5'>
+              <Col>
+                <FinancialsCard type={FinancialsType.Property} />
+              </Col>
+            </Row>
+
+            <Row className='mt-5'>
+              <Col>
+                
               </Col>
             </Row>
           </Container>
