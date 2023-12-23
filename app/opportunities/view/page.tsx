@@ -9,7 +9,7 @@ import { useSearchParams } from 'next/navigation'
 
 export default function Page() {
     const searchParams = useSearchParams()
-    console.log("property id: " + searchParams.get("id"))
+    console.log("opportunity id: " + searchParams.get("id"))
 
     return <>
         <Container>

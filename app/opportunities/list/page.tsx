@@ -14,7 +14,7 @@ export default function Page() {
             <Row>
                 <Col>
                     <Card className='propertyCard'>
-                        <PropertyCardImg path='/opportunies/view' id='123' imgSrc="../1-0.webp" />
+                        <PropertyCardImg path='/opportunities/view' id='123' imgSrc="../1-0.webp" />
                         <Card.Body>
                             <Card.Title>Casa 4 Quartos - Disney Springs</Card.Title>
                             <Card.Text>
@@ -41,7 +41,7 @@ export default function Page() {
                 </Col>
                 <Col>
                     <Card className='propertyCard'>
-                        <PropertyCardImg path='/opportunies/view' id='123' imgSrc="../2-0.webp" />
+                        <PropertyCardImg path='/opportunities/view' id='123' imgSrc="../2-0.webp" />
                         <Card.Body>
                             <Card.Title>Casa 5 Quartos - Super Piscina</Card.Title>
                             <Card.Text>

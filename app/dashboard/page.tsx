@@ -39,43 +39,6 @@ ChartJS.register(
 import './page.css'
 
 export default function Page() {
-    const labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro'];
-
-    const optionsIncome = {
-        scales: {
-            y: {
-                ticks: {
-                    callback: function (value: any, index: any, values: any[]) {
-                        return 'R$' + value.toFixed(2);
-                    }
-                }
-            }
-        }
-    };
-
-    const dataIncome = {
-        labels,
-        datasets: [
-            {
-                label: 'Receita dos Últimos 12 Meses',
-                data: [2541, 3150, 1900, 4001, 4900, 3600, 3500, 3100, 2900],
-                backgroundColor: 'rgba(53, 162, 235, 0.7)',
-            },
-        ],
-    };
-
-    const dataReservedDays = {
-        labels,
-        datasets: [
-            {
-                label: 'Dias Reservados dos Últimos 12 Meses',
-                data: [21, 22, 25, 19, 26, 20, 18, 14, 19],
-                borderColor: 'rgba(53, 162, 235, 0.7)',
-                backgroundColor: 'rgba(53, 162, 235, 0.7)',
-            },
-        ],
-    };
-
     return <>
         <Container>
             <Row className='mt-4'><h3>Propriedades</h3></Row>
