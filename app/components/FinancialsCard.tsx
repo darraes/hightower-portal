@@ -9,13 +9,7 @@ import {
     MDBCol
 } from 'mdb-react-ui-kit';
 import { monthText } from '../utils/DateTimeUtils';
-
-export enum FinancialsType {
-    Property = 1,
-    PropertyFuture,
-    User,
-    UserFuture
-}
+import { FinancialsType } from './FinancialsType';
 
 export function FinancialsCard({ type }: { type: FinancialsType}) {
     const month = monthText(new Date().getMonth());

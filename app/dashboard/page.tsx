@@ -6,7 +6,11 @@ import Col from 'react-bootstrap/Col';
 import Image from 'next/image';
 import ReservationsTable from '../reservations/ReservationsTable'
 import PropertyDigitalAccountTable from '../digital_account/property/PropertyDigitalAccountTable'
-import { FinancialsCard, FinancialsType } from '../components/FinancialsCard'
+import { FinancialsCard } from '../components/FinancialsCard'
+import { FinancialsType } from '../components/FinancialsType';
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
+import { FinancialsProgressCharts } from '../components/FinancialsProgress'
 
 import {
     Chart as ChartJS,
@@ -20,11 +24,6 @@ import {
     Legend,
 } from 'chart.js';
 import { Bar, Line } from 'react-chartjs-2';
-
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
-
-
 
 ChartJS.register(
     CategoryScale,
@@ -132,14 +131,7 @@ export default function Page() {
         </Container>
         <Container>
             <Row className='mt-5'><h3>Progresso</h3></Row>
-            <Row>
-                <Col className='progressChart'>
-                    <Bar className='floatLeft progressChart' options={optionsIncome} data={dataIncome} />
-                </Col>
-                <Col className='progressChart'>
-                    <Line className='floatRight progressChart' options={{}} data={dataReservedDays} />
-                </Col>
-            </Row>
+            <FinancialsProgressCharts type={FinancialsType.User} />
         </Container>
         <Container>
             <Row className='mt-5'>

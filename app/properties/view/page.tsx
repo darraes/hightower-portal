@@ -9,9 +9,10 @@ import { AttributeList, AttribType } from '@/app/components/Attribute';
 import Image from 'next/image'
 import Label from '../../components/Label'
 import Link from 'next/link'
-import { FinancialsCard, FinancialsType } from '../../components/FinancialsCard'
+import { FinancialsCard } from '../../components/FinancialsCard'
 import Button from 'react-bootstrap/Button';
-
+import { FinancialsType } from '../../components/FinancialsType';
+import { FinancialsProgressCharts } from '../../components/FinancialsProgress'
 
 
 export default function Page() {
@@ -84,10 +85,9 @@ export default function Page() {
                 <FinancialsCard type={FinancialsType.Property} />
               </Col>
             </Row>
-
             <Row className='mt-5'>
               <Col>
-                
+                <FinancialsProgressCharts type={FinancialsType.User} />
               </Col>
             </Row>
           </Container>
