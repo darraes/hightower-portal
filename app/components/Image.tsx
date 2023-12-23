@@ -9,6 +9,6 @@ export default function Image({ src, alt }: { src: string, alt: string }) {
 
     return (
         <>
-            <img className='img-fluid' src={image.src} alt={alt} />
+            <img className='img-fluid ' src={image.src} alt={alt} />
         </>);
 }

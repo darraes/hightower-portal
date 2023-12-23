@@ -21,10 +21,11 @@ const detailsButtonStyle = {
 };
 
 
+
+
 export default function Page() {
   const searchParams = useSearchParams()
   const propertyId = searchParams.get("id")
-  console.log("property id: " + propertyId)
 
   var priorityAttribs =
     [

@@ -24,7 +24,21 @@ main {
   margin: auto;
 }
 
+.centeredDiv {
+  margin: auto;
+  width: 90%;
+}
+
 .removeUnderline {
   text-decoration: none !important;
   display: inline-block;
+}
+
+.width-75w {
+  max-width: none !important;
+  width: 75% !important;
+}
+
+.auto-width {
+  width: 'auto'
 }
