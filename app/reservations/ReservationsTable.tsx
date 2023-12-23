@@ -2,7 +2,7 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
 export default function PropertyDigitalAccountTable(
-    { disablePagination, recordsPerPage }: { disablePagination: boolean, recordsPerPage: number }) {
+    { disablePagination, recordsPerPage, propertyId }: { disablePagination: boolean, recordsPerPage: number, propertyId?: string | null | undefined }) {
     return (<Table responsive>
         <thead>
             <tr>
@@ -31,18 +31,20 @@ export default function PropertyDigitalAccountTable(
                 <td>R$ 1.163,73</td>
                 <td><Button className='floatRight' variant="outline-dark" size="sm">Ver</Button></td>
             </tr>
-            <tr>
-                <td>AD67BC</td>
-                <td>Airbnb</td>
-                <td>Cancelada</td>
-                <td><small className="text-muted">1456 Rancho Juanita, Orlando, FL 44565</small></td>
-                <td><small className="text-muted">Mickey e Minnie</small></td>
-                <td>09/02/2024</td>
-                <td>15/02/2024</td>
-                <td>R$ 7.762,09</td>
-                <td>R$ 2.103,73</td>
-                <td><Button className='floatRight' variant="outline-dark" size="sm">Ver</Button></td>
-            </tr>
+            {(propertyId == null || propertyId == undefined || propertyId.length == 0) &&
+                <tr>
+                    <td>AD67BC</td>
+                    <td>Airbnb</td>
+                    <td>Cancelada</td>
+                    <td><small className="text-muted">1456 Rancho Juanita, Orlando, FL 44565</small></td>
+                    <td><small className="text-muted">Mickey e Minnie</small></td>
+                    <td>09/02/2024</td>
+                    <td>15/02/2024</td>
+                    <td>R$ 7.762,09</td>
+                    <td>R$ 2.103,73</td>
+                    <td><Button className='floatRight' variant="outline-dark" size="sm">Ver</Button></td>
+                </tr>
+            }
             <tr>
                 <td>89UJIH</td>
                 <td>Direto</td>

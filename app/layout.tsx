@@ -7,7 +7,6 @@ import Meta from './components/Meta'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './globals.css'
-import './components/components.css'
 
 const comfortaa = Comfortaa({ subsets: ['latin'] })
 const inter = Inter({ subsets: ['latin'] })

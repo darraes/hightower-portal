@@ -15,10 +15,16 @@ import { FinancialsType } from '../../components/FinancialsType';
 import { FinancialsProgressCharts } from '../../components/FinancialsProgress'
 import ReservationsTable from '../../reservations/ReservationsTable'
 
+const detailsButtonStyle = {
+  marginTop: '15px',
+  marginRight: '40px'
+};
+
 
 export default function Page() {
   const searchParams = useSearchParams()
-  console.log("property id: " + searchParams.get("id"))
+  const propertyId = searchParams.get("id")
+  console.log("property id: " + propertyId)
 
   var priorityAttribs =
     [
@@ -76,13 +82,13 @@ export default function Page() {
                     <Label img='/dollar-ico.png' text="HOA U$129" />
                     <Label img='/fence-ico.png' text="Lote de 400m2" />
                     <Label img='/ruler-ico.png' text="Parques a 1KM" />
-                    <Button className='label img-overlay-button' variant="outline-dark" size="sm">Detalhes</Button>
+                    <Button style={detailsButtonStyle} variant="outline-dark" size="sm">Detalhes</Button>
                   </Col>
                 </Row>
               </Col>
             </Row>
             <Row className='mt-5'>
-                <Col><h3>Financeiro</h3></Col>
+              <Col><h3>Financeiro</h3></Col>
             </Row>
             <Row className='mt-2'>
               <Col>
@@ -95,13 +101,13 @@ export default function Page() {
               </Col>
             </Row>
             <Row className='mt-5'>
-                <Col><h3>Últimas Reservas</h3></Col>
-                <Col><Button className='floatRight' variant="outline-dark" size="sm">Ver Todas</Button></Col>
+              <Col><h3>Últimas Reservas</h3></Col>
+              <Col><Button className='floatRight' variant="outline-dark" size="sm">Ver Todas</Button></Col>
             </Row>
             <Row>
-                <Col>
-                    <ReservationsTable disablePagination={true} recordsPerPage={10} />
-                </Col>
+              <Col>
+                <ReservationsTable disablePagination={true} recordsPerPage={10} propertyId={propertyId} />
+              </Col>
             </Row>
           </Container>
         </Col>
