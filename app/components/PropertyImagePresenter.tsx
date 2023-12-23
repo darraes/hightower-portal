@@ -12,10 +12,6 @@ const allPhotosButtonStyle = {
     width: '120px',
 };
 
-const modalHeaderStyle = {
-    padding: '10px'
-};
-
 const modalBodyStyle = {
     padding: '30px'
 };
@@ -24,6 +20,15 @@ const thumbnailStyle = {
     width: 'auto',
     minWidth: "100px",
     marginTop: '15px'
+};
+
+const imageStyle = {
+    maxWidth: '60em',
+    maxHeight: '42em'
+};
+
+const carouselItemStyle = {
+    height: '38em',
 };
 
 function ControlledCarousel({ images, index, setIndex }: { images: string[], index: number, setIndex: (i: number) => void }) {
@@ -36,8 +41,8 @@ function ControlledCarousel({ images, index, setIndex }: { images: string[], ind
         <Carousel className='centeredDiv' interval={null} activeIndex={index} onSelect={handleImgSelect}>
             {images.map(function (image, i) {
                 return (
-                    <Carousel.Item key={i}>
-                        <div className='img-fluid centeredDiv'>
+                    <Carousel.Item style={carouselItemStyle} key={i}>
+                        <div style={imageStyle} className='img-fluid centeredDiv'>
                             <Image alt={'image-' + i} src={image} />
                         </div>
                     </Carousel.Item>
@@ -59,7 +64,10 @@ function ImageShow({ images, show, setShow }:
                 onHide={() => setShow(false)}
                 dialogClassName="width-75w"
             >
-                <Modal.Header style={modalHeaderStyle} closeButton>
+                <Modal.Header closeButton>
+                    <Modal.Title>
+                        122 Disney Springs, Orlando, FL 44555
+                    </Modal.Title>
                 </Modal.Header>
                 <Modal.Body style={modalBodyStyle}>
                     <Container>
@@ -71,7 +79,7 @@ function ImageShow({ images, show, setShow }:
                                 {images.map(function (image, i) {
                                     return (
                                         <div key={i} style={thumbnailStyle} className='floatLeft '>
-                                            <NImage className='' width={80} height={60} alt='1' src={image} onClick={() => setSelectedImgIndex(i)} />
+                                            <NImage className='pointer' width={80} height={60} alt='1' src={image} onClick={() => setSelectedImgIndex(i)} />
                                         </div>
                                     );
                                 })}
@@ -110,16 +118,16 @@ export default function PropertyImagePresenter({ id }: { id: string | null }) {
                 </Col>
                 <Col xs={6} md={4}>
                     <Row>
-                        <Image alt='image-1' src={images[1]} />
+                        <Image alt='image-2' src={images[1]} />
                     </Row>
                     <Row className="mt-3">
-                        <Image alt='image-1' src={images[1]} />
+                        <Image alt='image-3' src={images[1]} />
                     </Row>
                 </Col>
             </Row>
             <Row className="mt-2">
                 <Col>
-                    <Button style={allPhotosButtonStyle} onClick={() => setShow(true)} className='floatRight' variant="outline-dark" size="sm">37 Imagens</Button>
+                    <Button style={allPhotosButtonStyle} onClick={() => setShow(true)} className='floatRight' variant="outline-dark" size="sm">{images.length} Imagens</Button>
                 </Col>
             </Row>
         </Container>

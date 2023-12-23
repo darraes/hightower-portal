@@ -42,3 +42,7 @@ main {
 .auto-width {
   width: 'auto'
 }
+
+img.pointer {
+  cursor: pointer;
+}
