@@ -13,6 +13,7 @@ import { FinancialsCard } from '../../components/FinancialsCard'
 import Button from 'react-bootstrap/Button';
 import { FinancialsType } from '../../components/FinancialsType';
 import { FinancialsProgressCharts } from '../../components/FinancialsProgress'
+import ReservationsTable from '../../reservations/ReservationsTable'
 
 
 export default function Page() {
@@ -81,6 +82,9 @@ export default function Page() {
               </Col>
             </Row>
             <Row className='mt-5'>
+                <Col><h3>Financeiro</h3></Col>
+            </Row>
+            <Row className='mt-2'>
               <Col>
                 <FinancialsCard type={FinancialsType.Property} />
               </Col>
@@ -89,6 +93,15 @@ export default function Page() {
               <Col>
                 <FinancialsProgressCharts type={FinancialsType.User} />
               </Col>
+            </Row>
+            <Row className='mt-5'>
+                <Col><h3>Últimas Reservas</h3></Col>
+                <Col><Button className='floatRight' variant="outline-dark" size="sm">Ver Todas</Button></Col>
+            </Row>
+            <Row>
+                <Col>
+                    <ReservationsTable disablePagination={true} recordsPerPage={10} />
+                </Col>
             </Row>
           </Container>
         </Col>

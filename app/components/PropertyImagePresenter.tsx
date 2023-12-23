@@ -4,6 +4,9 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Image from './Image'
 
+const allPhotosButtonStyle = {
+    width: '120px',
+};
 
 export default function PropertyImagePresenter({ id }: { id: string | null }) {
     return <>
@@ -23,7 +26,7 @@ export default function PropertyImagePresenter({ id }: { id: string | null }) {
             </Row>
             <Row className="mt-2">
                 <Col>
-                    <Button className='floatRight img-overlay-button' variant="outline-dark" size="sm">37 Imagens</Button>
+                    <Button style={allPhotosButtonStyle} className='floatRight' variant="outline-dark" size="sm">37 Imagens</Button>
                 </Col>
             </Row>
         </Container>
