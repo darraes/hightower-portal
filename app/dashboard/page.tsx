@@ -11,7 +11,7 @@ import {
     MDBCol
 } from 'mdb-react-ui-kit';
 import { monthText } from '../utils/DateTimeUtils';
-import { AttributeContainer } from '../components/Attribute';
+import { AttributeBox } from '../components/Attribute';
 import Image from 'next/image';
 import ReservationsTable from '../reservations/ReservationsTable'
 import PropertyDigitalAccountTable from '../digital_account/property/PropertyDigitalAccountTable'
@@ -169,19 +169,19 @@ export default function Page() {
                             <MDBCol md='4' className='borderOffset'>
                                 <MDBCardBody>
                                     <MDBCardTitle className='mb-3'>Esse Mês <small className='text-muted'>({month})</small></MDBCardTitle>
-                                    <AttributeContainer attributes={currentMonthAttributes} />
+                                    <AttributeBox attributes={currentMonthAttributes} />
                                 </MDBCardBody>
                             </MDBCol>
                             <MDBCol md='4' className='borderOffset'>
                                 <MDBCardBody>
                                     <MDBCardTitle className='mb-3'>Esse Ano <small className='text-muted'>({year})</small></MDBCardTitle>
-                                    <AttributeContainer attributes={currentYearAttributes} />
+                                    <AttributeBox attributes={currentYearAttributes} />
                                 </MDBCardBody>
                             </MDBCol>
                             <MDBCol md='4'>
                                 <MDBCardBody>
                                     <MDBCardTitle className='mb-3'>Total <small className='text-muted'>(desde 04/2021)</small></MDBCardTitle>
-                                    <AttributeContainer attributes={totalAttributes} />
+                                    <AttributeBox attributes={totalAttributes} />
                                 </MDBCardBody>
                             </MDBCol>
                         </MDBRow>
@@ -196,19 +196,19 @@ export default function Page() {
                             <MDBCol md='4' className='borderOffset'>
                                 <MDBCardBody>
                                     <MDBCardTitle className='mb-3'>Esse Mês <small className='text-muted'>({month})</small></MDBCardTitle>
-                                    <AttributeContainer attributes={futureMonthAttributes} />
+                                    <AttributeBox attributes={futureMonthAttributes} />
                                 </MDBCardBody>
                             </MDBCol>
                             <MDBCol md='4' className='borderOffset'>
                                 <MDBCardBody>
                                     <MDBCardTitle className='mb-3'>Esse Ano <small className='text-muted'>({year})</small></MDBCardTitle>
-                                    <AttributeContainer attributes={futureYearAttributes} />
+                                    <AttributeBox attributes={futureYearAttributes} />
                                 </MDBCardBody>
                             </MDBCol>
                             <MDBCol md='4'>
                                 <MDBCardBody>
                                     <MDBCardTitle className='mb-3'>Total <small className='text-muted'>(desde 04/2021)</small></MDBCardTitle>
-                                    <AttributeContainer attributes={futureTotalAttributes} />
+                                    <AttributeBox attributes={futureTotalAttributes} />
                                 </MDBCardBody>
                             </MDBCol>
                         </MDBRow>

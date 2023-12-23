@@ -31,6 +31,7 @@ export default function Menu() {
                     <Nav className="me-auto">
                         <NavItem text='Dashboard' path="/dashboard" />
                         <NavItem text='Oportunidades' path="/opportunities/list" />
+                        <NavItem text='Propriedades' path="/properties/list" />
                         <NavDropdown title="Financeiro" id="basic-nav-dropdown">
                             <NavDropdownItem path="/digital_account/property" text="Movimetações" />
                             <NavDropdownItem text='Conta' path="/digital_account/user" />

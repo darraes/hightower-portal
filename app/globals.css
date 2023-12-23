@@ -9,9 +9,15 @@ main {
 }
 
 .floatLeft {
-  float: right;
+  float: left;
 }
 
-.center {
+.propertyCard {
   margin: auto;
+  max-width: 24rem;
+}
+
+.removeUnderline {
+  text-decoration: none !important;
+  display: inline-block;
 }
