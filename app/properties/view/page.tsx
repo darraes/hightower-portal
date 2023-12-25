@@ -33,7 +33,7 @@ export default function Page() {
       { name: "Quartos", value: "4" },
       { name: "Banheiros", value: "3" },
       { name: "Metros Quadrados", value: "142" },
-      { name: "Cotas", value: "0/1000" },
+      { name: "Cotas Disponíveis", value: "0/1000" },
     ];
 
   return <>
