@@ -21,7 +21,7 @@ export class CitadelClient {
     }
 
     post(path: string): void {
-        axios.post(this.basePath + '/login/', { "username": "daniel", "password": "admin123" })
+        axios.post(this.basePath + '/login/', { withCredentials: true, "username": "daniel", "password": "admin123" })
             .then(function (response) {
                 // handle success
                 console.log(response);

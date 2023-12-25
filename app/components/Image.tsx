@@ -2,13 +2,8 @@
 
 import { useImage } from 'react-image'
 
-export default function Image({ src, alt }: { src: string, alt: string }) {
-    const image = useImage({
-        srcList: src,
-    })
-
+export default function Image2({ src, alt }: { src: string, alt: string }) {
     return (
-        <>
-            <img className='img-fluid ' src={image.src} alt={alt} />
-        </>);
+        <img className='img-fluid ' src={src} alt={alt} />
+    );
 }
