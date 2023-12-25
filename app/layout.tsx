@@ -1,15 +1,11 @@
 import type { Metadata } from 'next'
-import { Comfortaa } from 'next/font/google'
-import { Inter } from 'next/font/google'
+import { comfortaa } from './globals'
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Meta from './components/Meta'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './globals.css'
-
-const comfortaa = Comfortaa({ subsets: ['latin'] })
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Portal AirShare',
