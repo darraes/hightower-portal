@@ -33,7 +33,7 @@ export default function Page() {
   useEffect(() => {
     var citadel = new CitadelClient()
     citadel.post("")
-    //citadel.get("")
+    citadel.get("")
     setCalled(true)
 
   }, [])
