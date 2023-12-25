@@ -13,6 +13,7 @@ import {
 } from 'mdb-react-ui-kit';
 import Image from 'next/image'
 import LoginLayout from './layout';
+import Button from 'react-bootstrap/Button';
 
 const containerStyle = {
     maxWidth: '50em'
@@ -48,7 +49,8 @@ export default function Page() {
                             <MDBInput wrapperClass='mb-4' label='Usuário' id='formControlLg' type='email' size="lg" />
                             <MDBInput wrapperClass='mb-4' label='Senha' id='formControlLg' type='password' size="lg" />
 
-                            <MDBBtn className="mb-4 px-5" color='dark' size='lg'>Entrar</MDBBtn>
+                            <Button className='mb-4 px-5' variant="dark" size="lg">Entrar</Button>
+                            
                             <a className="small text-muted" href="#!">Esqueci a senha</a>
 
                             <div className='mt-5 d-flex flex-row justify-content-start centeredText'>

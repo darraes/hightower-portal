@@ -14,6 +14,8 @@ import Button from 'react-bootstrap/Button';
 import { FinancialsType } from '../../components/FinancialsType';
 import { FinancialsProgressCharts } from '../../components/FinancialsProgress'
 import ReservationsTable from '../../reservations/ReservationsTable'
+import { CitadelClient } from '../../server/Citadel'
+import React, { useState, useEffect } from 'react';
 
 const detailsButtonStyle = {
   marginTop: '15px',
@@ -26,6 +28,16 @@ const detailsButtonStyle = {
 export default function Page() {
   const searchParams = useSearchParams()
   const propertyId = searchParams.get("id")
+
+  const [called, setCalled] = useState(false);
+  useEffect(() => {
+    var citadel = new CitadelClient()
+    //citadel.post("")
+    citadel.get("")
+    setCalled(true)
+
+  }, [])
+
 
   var priorityAttribs =
     [

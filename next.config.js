@@ -9,4 +9,5 @@ module.exports = {
             },
         ]
     },
+    reactStrictMode: false, // Prevents the double request
 }
