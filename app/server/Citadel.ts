@@ -2,10 +2,11 @@ import axios from 'axios';
 
 export class CitadelClient {
 
-    readonly basePath: string = "http://127.0.0.1:8000/api"
+    readonly basePath: string = "http://localhost:8000/api"
 
     get(path: string): void {
-        axios.get(this.basePath + '/property/1/', { withCredentials: true })
+        console.log("GET to " + path)
+        axios.get(this.basePath + path, { withCredentials: true })
             .then(function (response) {
                 // handle success
                 console.log(response);
@@ -21,11 +22,13 @@ export class CitadelClient {
     }
 
     post(path: string): void {
-        axios.post(this.basePath + '/login/', { withCredentials: true,"username": "daniel", "password": "admin123" })
+        console.log("POST to " + path)
+        axios.post(this.basePath + '/login/',
+            { "username": "daniel", "password": "admin123" }, { withCredentials: true })
             .then(function (response) {
                 // handle success
                 console.log(response);
-                
+
             })
             .catch(function (error) {
                 // handle error

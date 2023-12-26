@@ -32,8 +32,9 @@ export default function Page() {
   const [called, setCalled] = useState(false);
   useEffect(() => {
     var citadel = new CitadelClient()
-    citadel.post("")
-    citadel.get("")
+    //citadel.post("")
+    citadel.get("/property/1/")
+    //citadel.get("/logout/")
     setCalled(true)
 
   }, [])
