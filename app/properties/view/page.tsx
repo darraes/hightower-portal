@@ -29,13 +29,12 @@ export default function Page() {
   const searchParams = useSearchParams()
   const propertyId = searchParams.get("id")
 
-  const [called, setCalled] = useState(false);
   useEffect(() => {
     var citadel = new CitadelClient()
     //citadel.post("")
-    citadel.get("/property/1/")
+    citadel.get("/property/2/")
     //citadel.get("/logout/")
-    setCalled(true)
+
 
   }, [])
 

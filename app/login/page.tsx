@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     MDBBtn,
     MDBContainer,
@@ -14,12 +14,35 @@ import {
 import Image from 'next/image'
 import LoginLayout from './layout';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import { CitadelClient } from '../server/Citadel'
+import { CookiesProvider, useCookies } from "react-cookie";
 
 const containerStyle = {
     maxWidth: '50em'
 }
 
+function tryLogin(e: any, user: string, password: string) {
+    e.preventDefault();
+
+    var citadel = new CitadelClient()
+    citadel.get("/logout/")
+    citadel.post("/login/", { "username": user, "password": password }).then(function (response) {
+        // handle success
+        console.log(response.headers);
+    }).catch(function (error) {
+        // handle error
+        console.log(error);
+    }).finally(function () {
+        // always executed
+    });
+
+}
+
 export default function Page() {
+    const [user, setUser] = useState("")
+    const [password, setPassword] = useState("")
+
     return (
         <MDBContainer style={containerStyle} className="my-5">
 
@@ -46,11 +69,19 @@ export default function Page() {
 
                             <h5 className="fw-normal my-4 pb-1" style={{ letterSpacing: '1px' }}>Acesse sua conta</h5>
 
-                            <MDBInput wrapperClass='mb-4' label='Usuário' id='formControlLg' type='email' size="lg" />
-                            <MDBInput wrapperClass='mb-4' label='Senha' id='formControlLg' type='password' size="lg" />
 
-                            <Button className='mb-4 px-5' variant="dark" size="lg">Entrar</Button>
-                            
+                            <Form onSubmit={(e) => tryLogin(e, user, password)}>
+                                <Form.Group className="mb-4" controlId="formBasicEmail">
+                                    <Form.Control type="user" placeholder="Usuário" onChange={e => setUser(e.target.value)} />
+                                </Form.Group>
+
+                                <Form.Group className="mb-4" controlId="formBasicPassword">
+                                    <Form.Control type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+                                </Form.Group>
+
+                                <Button className='mb-4 px-5' variant="dark" size="lg" type="submit">Entrar</Button>
+                            </Form>
+
                             <a className="small text-muted" href="#!">Esqueci a senha</a>
 
                             <div className='mt-5 d-flex flex-row justify-content-start centeredText'>
@@ -69,6 +100,6 @@ export default function Page() {
     );
 }
 
-Page.getLayout = function(page: any) {
+Page.getLayout = function (page: any) {
     return <LoginLayout>{page}</LoginLayout>;
-  };
+};
