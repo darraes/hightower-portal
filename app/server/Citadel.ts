@@ -5,22 +5,29 @@ export class CitadelClient {
     readonly basePath: string = "http://localhost:8000/api"
 
     isLoggedIn() {
-
+        // Check local storage for Tokens & time. If under [X] minutes, return True
+        // Call verify token endpoint. Return true if verified
+        // Return false otherwise
     }
 
     login(username: string, password: string) {
-
+        // Do POST to login endpoint
+        // Store locally
+        // - Access Token
+        // - Refresh Token
+        // - Login UTC datetime as Access Token time
     }
 
-    maybeRefreshAuthorizationToken() {
-
+    maybeRefreshAuthorizationToken() : boolean {
+        // Check if user is logged in
+        // If no, return false
+        // if logged in and its been more than 5 minutes from last refresh, refresh it
+        return true
     }
 
     get(path: string): void {
         axios.get(this.basePath + path, {
-            headers: {
-                "Authorization": "Bearer {}"
-            }
+            headers: {}
         })
             .then(function (response) {
                 // handle success
