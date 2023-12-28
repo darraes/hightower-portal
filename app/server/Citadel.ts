@@ -4,10 +4,22 @@ export class CitadelClient {
 
     readonly basePath: string = "http://localhost:8000/api"
 
+    isLoggedIn() {
+
+    }
+
+    login(username: string, password: string) {
+
+    }
+
+    maybeRefreshAuthorizationToken() {
+
+    }
+
     get(path: string): void {
         axios.get(this.basePath + path, {
             headers: {
-                "Authorization": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAzNzg0MzEwLCJpYXQiOjE3MDM3ODA3MTAsImp0aSI6IjNhMGFkZjNhNjU4YzQ4NTM4MjhkMGJmZWE0YWM3ZmIxIiwidXNlcl9pZCI6Mn0.GjErsO1iHsBIWmgB39UHEUluWtJbRe4V6CIOzW29AX-XOA9cQB-2VxUfRgJhBKTGRANarrJyHTDLtfKzTGb5Ww"
+                "Authorization": "Bearer {}"
             }
         })
             .then(function (response) {

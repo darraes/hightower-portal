@@ -16,7 +16,6 @@ import LoginLayout from './layout';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { CitadelClient } from '../server/Citadel'
-import { CookiesProvider, useCookies } from "react-cookie";
 
 const containerStyle = {
     maxWidth: '50em'
@@ -24,18 +23,9 @@ const containerStyle = {
 
 function tryLogin(e: any, user: string, password: string) {
     e.preventDefault();
-
     var citadel = new CitadelClient()
-    citadel.get("/logout/")
-    citadel.post("/login/", { "username": user, "password": password }).then(function (response) {
-        // handle success
-        console.log(response.headers);
-    }).catch(function (error) {
-        // handle error
-        console.log(error);
-    }).finally(function () {
-        // always executed
-    });
+    
+    localStorage.setItem("token", "123")
 
 }
 
